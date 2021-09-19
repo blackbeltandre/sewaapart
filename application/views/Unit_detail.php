@@ -58,7 +58,7 @@
 <div class="row">
                 <div class="col-lg-4 col-sm-5"><img src="<?php echo base_url(); ?>/assets/foto/<?php echo $related_unit["foto"];?>" class="img-responsive img-circle" alt="properties"/></div>
                 <div class="col-lg-8 col-sm-7">
-                  <h5><a href="<?php echo base_url(); ?>unit/detail/<?php echo $related_unit["id_gallery"];?>/<?php echo $related_unit["id_category"];?>"><font color="black"><span class="glyphicon glyphicon-pencil"> <?php echo strtoupper($related_unit["title"]);?></font></a></h5>
+                  <h5><a href="<?php echo base_url(); ?>unit/detail/<?php echo $related_unit["id_gallery"];?>/<?php echo $related_unit["id_category"];?>"><font color="black"><span class="glyphicon glyphicon-pencil"></span> <?php echo strtoupper($related_unit["title"]);?></font></a></h5>
                   <p class="price feature-work-body text-muted light-300"><span class="glyphicon glyphicon-calendar"></span> <?php echo $related_unit["date_post"];?></p> </div>
               </div>
 <?php }}else{ ?>
@@ -90,7 +90,7 @@
         <?php
       foreach($not_related_unit as $not_related_unit){ ?>
   <img src="<?php echo base_url(); ?>/assets/foto/<?php echo $not_related_unit["foto"];?>" class="img-responsive" alt="advertisement">
-  <hr><h5><a href="<?php echo base_url(); ?>unit/detail/<?php echo $not_related_unit["id_gallery"];?>/<?php echo $not_related_unit["id_category"];?>"><font color="black"><span class="glyphicon glyphicon-pencil"> <?php echo strtoupper($not_related_unit["title"]);?></font></a></h5>
+  <hr><h5><a href="<?php echo base_url(); ?>unit/detail/<?php echo $not_related_unit["id_gallery"];?>/<?php echo $not_related_unit["id_category"];?>"><font color="black"><span class="glyphicon glyphicon-pencil"> </span> <?php echo strtoupper($not_related_unit["title"]);?></font></a></h5>
                   <p class="price feature-work-body text-muted light-300"><span class="glyphicon glyphicon-calendar"></span> <?php echo $not_related_unit["date_post"];?> </p> 
 <?php }}else{ ?>
 
@@ -158,7 +158,7 @@
   <div class="col-lg-12  col-sm-6">
 <div class="property-info">
 <!-- <p class="price">$ 200,000,000</p> -->
-  <hr><p class="area"><span class="glyphicon glyphicon-map-marker"></span> Jakarta ,Indonesia</p>
+  <p class="area"><span class="glyphicon glyphicon-map-marker"></span> Jakarta ,Indonesia</p>
   <div class="profile">
    <hr><span class="glyphicon glyphicon-user"></span> Agent Details
   <p>Jason<br>081263922606</p>

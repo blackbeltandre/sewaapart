@@ -283,7 +283,7 @@ z-index:100;
           <p>Dapatkan Penawaran Terbaik Melalui Agent Kami</p>
           <a class="btn btn-info" target="_blank" href="https://api.whatsapp.com/send?phone=081263922606&text=Hi,saya ingin memesan room ? https://sewajualapart.com">
           <?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Hubungi Agent
+                    Hubungi Agen
                     <?php }else{ ?>
                       Call Agent
                   <?php } ?></a></div>
