@@ -158,10 +158,21 @@
   <div class="col-lg-12  col-sm-6">
 <div class="property-info">
 <!-- <p class="price">$ 200,000,000</p> -->
-  <p class="area"><span class="glyphicon glyphicon-map-marker"></span> Jakarta ,Indonesia</p>
+  <p class="area"><span class="glyphicon glyphicon-map-marker"></span>
+  <?php if(get_cookie('lang_is') === 'in'){ ?>
+                    Lokasi
+                    <?php }else{ ?>
+                      Location
+                  <?php } ?>
+                  <br> <strong>DKI Jakarta </strong>,Jakarta Selatan ,<font color="black"><u>Indonesia</u></font></p>
   <div class="profile">
-   <hr><span class="glyphicon glyphicon-user"></span> Agent Details
-  <p>Jason<br>081263922606</p>
+   <hr><span class="glyphicon glyphicon-user"></span>  <?php if(get_cookie('lang_is') === 'in'){ ?>
+                    Detail Agen
+                    <?php }else{ ?>
+                      Agent Detail
+                  <?php } ?>
+
+  <p><font color="black"><strong>Jasen Sihite <br><u>081263922606</u></font></strong></p>
   </div>
 </div>
  <hr>
@@ -191,8 +202,18 @@
 </div> <hr>
 <div class="col-lg-12 col-sm-6 ">
 <div class="enquiry">
-  <h6><span class="glyphicon glyphicon-envelope"></span> Dapatkan Penawaran Terbaik</h6>
-  <a class="btn btn-primary" target="_blank" href="https://api.whatsapp.com/send?phone=081263922606&text=Hi,saya ingin memesan room ? https://sewajualapart.com">Call Agent</a>
+  <h6><span class="glyphicon glyphicon-envelope"></span> <?php if(get_cookie('lang_is') === 'in'){ ?>
+                    Dapatkan Penawaran Terbaik
+                    <?php }else{ ?>
+                      Get the Best Deals
+                  <?php } ?>
+                </h6>
+  <a class="btn btn-primary" target="_blank" href="https://api.whatsapp.com/send?phone=081263922606&text=Hi,saya ingin memesan room ? https://sewajualapart.com"><?php if(get_cookie('lang_is') === 'in'){ ?>
+                    Hubungi Agen
+                    <?php }else{ ?>
+                      Call Agent
+                  <?php } ?>
+                </a>
  </div>         
 </div>
   </div>

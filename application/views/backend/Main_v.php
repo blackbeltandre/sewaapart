@@ -177,7 +177,7 @@ z-index: 9999;
 
                             </a>
                         </li>
-                        <li>
+                       <!--  <li>
                             <a class="tooltip-tip ajax-load" href="#" title="Master Article">
                                 <i class="icon-document-edit"></i>
                                 <span>Master Article</span>
@@ -191,7 +191,7 @@ z-index: 9999;
                                     <a class="tooltip-tip2 ajax-load" href="<?php echo base_url("backend/article/cek"); ?>" title="Article"><i class="entypo-newspaper"></i><span>Article</span></a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li>
                             <a class="tooltip-tip ajax-load" href="#" title="Master Page">
                                 <i class="icon-feed"></i>
