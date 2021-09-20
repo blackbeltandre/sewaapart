@@ -56,7 +56,16 @@
         <?php
       foreach($related_unit as $related_unit){ ?>
 <div class="row">
-                <div class="col-lg-4 col-sm-5"><img src="<?php echo base_url(); ?>/assets/foto/<?php echo $related_unit["foto"];?>" class="img-responsive img-circle" alt="properties"/></div>
+                <div class="col-lg-4 col-sm-5">
+                   <?php  
+         $foto_arritem = explode(",",$related_unit["foto"]); 
+         $count_arritem = count($foto_arritem)-1;
+         for ($fotositem = 0; $fotositem <= 0; $fotositem ++) {
+        $final_foto_item = $foto_arritem[$fotositem]; ?>
+        <img src="<?php echo base_url(); ?>assets/foto/<?php echo $final_foto_item;?>" class="img-responsive img-circle" />
+        <?php } ?>
+
+                </div>
                 <div class="col-lg-8 col-sm-7">
                   <h5><a href="<?php echo base_url(); ?>unit/detail/<?php echo $related_unit["id_gallery"];?>/<?php echo $related_unit["id_category"];?>"><font color="black"><span class="glyphicon glyphicon-pencil"></span> <?php echo strtoupper($related_unit["title"]);?></font></a></h5>
                   <p class="price feature-work-body text-muted light-300"><span class="glyphicon glyphicon-calendar"></span> <?php echo $related_unit["date_post"];?></p> </div>
@@ -89,7 +98,13 @@
                   <hr>
         <?php
       foreach($not_related_unit as $not_related_unit){ ?>
-  <img src="<?php echo base_url(); ?>/assets/foto/<?php echo $not_related_unit["foto"];?>" class="img-responsive" alt="advertisement">
+   <?php  
+         $foto_arritem = explode(",",$not_related_unit["foto"]); 
+         $count_arritem = count($foto_arritem)-1;
+         for ($fotositem = 0; $fotositem <= 0; $fotositem ++) {
+        $final_foto_item = $foto_arritem[$fotositem]; ?>
+        <img src="<?php echo base_url(); ?>assets/foto/<?php echo $final_foto_item;?>" class="img-responsive" />
+        <?php } ?>
   <hr><h5><a href="<?php echo base_url(); ?>unit/detail/<?php echo $not_related_unit["id_gallery"];?>/<?php echo $not_related_unit["id_category"];?>"><font color="black"><span class="glyphicon glyphicon-pencil"> </span> <?php echo strtoupper($not_related_unit["title"]);?></font></a></h5>
                   <p class="price feature-work-body text-muted light-300"><span class="glyphicon glyphicon-calendar"></span> <?php echo $not_related_unit["date_post"];?> </p> 
 <?php }}else{ ?>
@@ -110,28 +125,97 @@
       <!-- Indicators -->
       <ol class="carousel-indicators hidden-xs">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-       <!--  <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-      -->    </ol>
+       <?php
+        $foto_active = explode(",",$details["foto"]); 
+         $count_active = count($foto_active)-1;
+        for ($fotosactive = 0; $count_active <= 0; $fotosactive ++) {
+        $final_foto_active = $foto_active[$fotosactive];
+        ?>
+        <li data-target="#myCarousel" data-slide-to="<?php echo $count_active; ?>" class="active"></li>
+      <?php } ?>
+      <?php
+        $foto_arrnum = explode(",",$details["foto"]); 
+         $count_arrnum = count($foto_arrnum)-2;
+        for ($fotosnum = 0; $fotosnum <= $count_arrnum; $fotosnum ++) {
+        $final_fotosnum = $foto_arrnum[$fotosnum];
+        ?>
+         <li data-target="#myCarousel" data-slide-to="<?php echo $count_arrnum; ?>" class=""></li>
+       <?php } ?>
+       </ol>
       <div class="carousel-inner">
-        <!-- Item 1 -->
+        <!-- Item 1 --> 
+        <?php
+        $foto_arr = explode(",",$details["foto"]); 
+         $count_arr = count($foto_arr)-1;
+        for ($fotos = 0; $fotos <= 0; $fotos ++) {
+        $final_fotos = $foto_arr[$fotos];
+        ?>
         <div class="item active">
-          <img src="<?php echo base_url(); ?>/assets/foto/<?php echo $details["foto"];?>" class="properties" alt="properties" />
+                  <img src="<?php echo base_url(); ?>assets/foto/<?php echo $final_fotos;?>" class="properties" alt="properties"/>
         </div>
+      <?php } ?>
+      <?php  
+         $foto_arritem = explode(",",$details["foto"]); 
+         $count_arritem = count($foto_arritem)-1;
+         for ($fotositem = 0; $fotositem <= $count_arritem; $fotositem ++) {
+        $final_foto_item = $foto_arritem[$fotositem]; ?>
+         <div class="item">
+           <img src="<?php echo base_url(); ?>assets/foto/<?php echo $final_foto_item;?>" class="properties" alt="properties"/>
+        </div><?php } ?>
         <!-- #Item 1 -->
 
-        <!-- Item 2 -->
+     
       </div>
       <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
 <!-- #Slider Ends -->
-
   </div>
-  
-
-
 
   <div class="spacer"><h4><span class="glyphicon glyphicon-th-list"></span> Unit Detail</h4>
+     <style>
+div.gallery {
+  margin: 5px;
+  float: left;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>                     
+     <hr>
+       <font color="black"><strong>Klik gambar untuk melihat ukuran penuh.</font></strong>
+
+     <?php  
+         $foto_arritem = explode(",",$details["foto"]); 
+         $count_arritem = count($foto_arritem)-1;
+         for ($fotositem = 0; $fotositem <= $count_arritem; $fotositem ++) {
+        $final_foto_item = $foto_arritem[$fotositem]; ?>
+     <center> 
+  <div class="gallery"> 
+  <a target="_blank" href="<?php echo base_url(); ?>assets/foto/<?php echo $final_foto_item;?>">
+    <img src="<?php echo base_url(); ?>assets/foto/<?php echo $final_foto_item;?>" width="600" height="400" alt="properties"/>
+  </a>
+</div>
+</center><?php } ?>
+<br>
+<br>
+<br>
+
       <p><?php echo $details["description"];?></p>
      <br><span class="glyphicon glyphicon-read"></span>
  <br><br> Tags :  <ul>

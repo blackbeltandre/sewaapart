@@ -130,7 +130,13 @@
                         </th>
                         <!--   <th  style="width:10%"><?php echo word_limiter($gallery[$i]["description"],5); ?></th>
                         -->   <th  style="width:10%"><center>
-                            <img src="<?php echo base_url();?>assets/foto/<?php echo $gallery[$i]["foto"];?>" width="120" height="120" onError="this.onerror=null;this.src='<?php echo base_url();?>assets/foto/foto.jpg';" width="120" height="120" />
+                            <?php  
+         $foto_arritem = explode(",",$gallery[$i]["foto"]); 
+         $count_arritem = count($foto_arritem)-1;
+         for ($fotositem = 0; $fotositem <= 0; $fotositem ++) {
+        $final_foto_item = $foto_arritem[$fotositem]; ?>
+        <img src="<?php echo base_url(); ?>assets/foto/<?php echo $final_foto_item;?>" class="img-responsive" />
+        <?php } ?>
                           </center></th>
 
 

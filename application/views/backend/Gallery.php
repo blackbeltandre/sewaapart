@@ -114,7 +114,7 @@
                                 <div class="col-sm-6">
                                        <div class="form-group">
                                       <label>Foto</label>
-                                        <input type="file" class="form-control" data-required="true" name="foto" value="<?php echo set_value('foto'); ?>">                        
+                                        <input type="file" class="form-control" name="foto[]" multiple="multiple">                        
                                </div></div>
                                    
                                     <div class="col-sm-12">

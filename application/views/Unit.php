@@ -46,7 +46,14 @@
      <!-- properties -->
       <div class="col-lg-4 col-sm-6">
       <div class="properties">
-        <div class="image-holder"><img src="<?php echo base_url(); ?>/assets/foto/<?php echo $show_room_category_detail["foto"];?>" class="img-responsive" alt="properties">
+        <div class="image-holder">
+           <?php  
+         $foto_arritem = explode(",",$show_room_category_detail["foto"]); 
+         $count_arritem = count($foto_arritem)-1;
+         for ($fotositem = 0; $fotositem <= 0; $fotositem ++) {
+        $final_foto_item = $foto_arritem[$fotositem]; ?>
+        <img src="<?php echo base_url(); ?>assets/foto/<?php echo $final_foto_item;?>" class="img-responsive" />
+        <?php } ?>
           <div class="status sold"><?php echo $show_room_category_detail["author"];?></div>
         </div>
         <h4><a href="<?php echo base_url(); ?>unit/detail/<?php echo $show_room_category_detail["id_gallery"];?>/<?php echo $show_room_category_detail["id_category"];?>"><?php  $titlenya = strtoupper($show_room_category_detail["title"]);

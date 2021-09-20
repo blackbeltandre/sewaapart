@@ -334,8 +334,8 @@ z-index:100;
                       Our Location 
                   <?php } ?>
                 </h4>
-                    <p><b>Kalibata City, Apartemen tower jasmine, RW.2, Rawajati,</b><br>
-<span class="glyphicon glyphicon-map-marker"></span> 12740  Kota Jakarta Selatan, Daerah Khusus Ibukota ,Indonesia <br>
+                    <p><b>Apartemen Kalibata City, Tower Jasmine, Rawajati,</b><br>
+<span class="glyphicon glyphicon-map-marker"></span> 12740  Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta,Indonesia <br>
             </div>
             
           <div class="col-lg-3 col-sm-3">

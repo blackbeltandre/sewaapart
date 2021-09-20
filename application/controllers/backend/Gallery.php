@@ -72,48 +72,41 @@ function proses()
     }
     else
     {
-       
-       $config['upload_path'] = './assets/foto/';
-        $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp';
-        $config['max_size'] = 2048000;
-        $this->upload->initialize($config);
-        $this->upload->do_upload('foto');
-        $upload = $this->upload->data();
-              $config['image_library']='gd2';
-              $config['source_image']='./assets/foto/'.$upload['file_name'];
-              $config['create_thumb']= FALSE;
-              $config['maintain_ratio']= TRUE;
-              $config['quality']= '90%';
-              $config['new_image']= './assets/foto/'.$upload['file_name'];
-              $this->load->library('image_lib', $config);
-              $this->image_lib->initialize($config);
-              $this->image_lib->resize();
-              $this->image_lib->clear();
-              $foto=$upload['file_name']; 
+         $image = array();
+        $ImageCount = count($_FILES['foto']['name']);
+        for($i = 0; $i < $ImageCount; $i++){
+            $_FILES['file']['name']       = $_FILES['foto']['name'][$i];
+            $_FILES['file']['type']       = $_FILES['foto']['type'][$i];
+            $_FILES['file']['tmp_name']   = $_FILES['foto']['tmp_name'][$i];
+            $_FILES['file']['error']      = $_FILES['foto']['error'][$i];
+            $_FILES['file']['size']       = $_FILES['foto']['size'][$i];
 
-        // $config_client_foto['upload_path'] = './assets/foto/';
-        // $config_client_foto['allowed_types'] = 'gif|jpg|png|jpeg|bmp';
-        // $config_client_foto['max_size'] = 2048000;
-        // $this->upload->initialize($config_client_foto);
-        // $this->upload->do_upload('client_foto');
-        // $upload_client = $this->upload->data();
-        //       $config_client_foto['image_library']='gd2';
-        //       $config_client_foto['source_image']='./assets/foto/'.$upload_client['file_name'];
-        //       $config_client_foto['create_thumb']= FALSE;
-        //       $config_client_foto['maintain_ratio']= TRUE;
-        //       $config_client_foto['quality']= '90%';
-        //       $config_client_foto['new_image']= './assets/foto/'.$upload_client['file_name'];
-        //       $this->load->library('image_lib', $config_client_foto);
-        //       $this->image_lib->initialize($config_client_foto);
-        //       $this->image_lib->resize();
-        //       $this->image_lib->clear();
-        //       $client_foto=$upload_client['file_name']; 
+            // File upload configuration
+            $uploadPath = './assets/foto/';
+            $config['upload_path'] = $uploadPath;
+            $config['allowed_types'] = '*';
+           $config['max_size'] = '*'; 
+            // Load and initialize upload library
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
 
-      $string=preg_replace('/[^a-zA-Z0-9 \&%|{.}=,?!*()"-_+$@;<>\']/', '', $this->input->post('title')); //filter karakter unik dan replace dengan kosong ('')
+            // Upload file to server
+            if($this->upload->do_upload('file')){
+                // Uploaded file data
+                $imageData = $this->upload->data();
+                 $uploadImgData[$i]= $imageData['file_name'];
+                 $image=implode(',',$uploadImgData);
+
+            }
+        }
+            // var_dump($image);
+            // Insert files data into the database
+            //$this->pages_model->multiple_images($uploadImgData);              
+            $string=preg_replace('/[^a-zA-Z0-9 \&%|{.}=,?!*()"-_+$@;<>\']/', '', $this->input->post('title')); //filter karakter unik dan replace dengan kosong ('')
         $trim=trim($string); // hilangkan spasi berlebihan dengan fungsi trim
         $pre_slug=strtolower(str_replace(" ", "-", $trim)); // hilangkan spasi, kemudian ganti spasi dengan tanda strip (-)
         $slug_gallery=$pre_slug.'.html'; 
-      $data = array(
+              $data = array(
             'id_category' => $this->input->post('id_category'),
             'lang' => $this->input->post('lang'),
             'tags' => $this->input->post('tags'),
@@ -125,7 +118,7 @@ function proses()
             // 'client_name' => $this->input->post('client_name'),
             // 'client_foto' => $client_foto,
             'slug_gallery'=>$slug_gallery,
-            'foto' => $foto 
+            'foto' =>$image
       );
     $create = $this->db->insert('gallery',$data);
         if ($create) $this->session->set_flashdata('message', "<div class='alert alert-dismissable alert-info'><button type='button' class='close' data-dismiss='alert'>
@@ -140,8 +133,8 @@ function proses()
                                             </font></button><strong><p align='center'>Something Wrong!</button></p></strong></div>");
       redirect('backend/gallery/cek');  
             }
-        }
-    
+    }
+
     function delete_multiple() {
           if($this->session->userdata('isLogin') == FALSE)
     {
@@ -240,43 +233,33 @@ function update_gallery($id_gallery)
        else
             {
         
-        $config['upload_path'] = './assets/foto/';
-        $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp';
-        $config['max_size'] = 2048000;
-        $this->upload->initialize($config);
-        $this->upload->do_upload('foto');
-        $upload = $this->upload->data();
-              $config['image_library']='gd2';
-              $config['source_image']='./assets/foto/'.$upload['file_name'];
-              $config['create_thumb']= FALSE;
-              $config['maintain_ratio']= TRUE;
-              $config['quality']= '90%';
-              $config['new_image']= './assets/foto/'.$upload['file_name'];
-              $this->load->library('image_lib', $config);
-              $this->image_lib->initialize($config);
-              $this->image_lib->resize();
-              $this->image_lib->clear();
-              $foto=$upload['file_name']; 
+         $image = array();
+        $ImageCount = count($_FILES['foto']['name']);
+        for($i = 0; $i < $ImageCount; $i++){
+            $_FILES['file']['name']       = $_FILES['foto']['name'][$i];
+            $_FILES['file']['type']       = $_FILES['foto']['type'][$i];
+            $_FILES['file']['tmp_name']   = $_FILES['foto']['tmp_name'][$i];
+            $_FILES['file']['error']      = $_FILES['foto']['error'][$i];
+            $_FILES['file']['size']       = $_FILES['foto']['size'][$i];
 
-        // $config_client_foto['upload_path'] = './assets/foto/';
-        // $config_client_foto['allowed_types'] = 'gif|jpg|png|jpeg|bmp';
-        // $config_client_foto['max_size'] = 2048000;
-        // $this->upload->initialize($config_client_foto);
-        // $this->upload->do_upload('client_foto');
-        // $upload_client = $this->upload->data();
-        //       $config_client_foto['image_library']='gd2';
-        //       $config_client_foto['source_image']='./assets/foto/'.$upload_client['file_name'];
-        //       $config_client_foto['create_thumb']= FALSE;
-        //       $config_client_foto['maintain_ratio']= TRUE;
-        //       $config_client_foto['quality']= '90%';
-        //       $config_client_foto['new_image']= './assets/foto/'.$upload_client['file_name'];
-        //       $this->load->library('image_lib', $config_client_foto);
-        //       $this->image_lib->initialize($config_client_foto);
-        //       $this->image_lib->resize();
-        //       $this->image_lib->clear();
-        //       $client_foto=$upload_client['file_name']; 
+            // File upload configuration
+            $uploadPath = './assets/foto/';
+            $config['upload_path'] = $uploadPath;
+            $config['allowed_types'] = '*';
+           $config['max_size'] = '*'; 
+            // Load and initialize upload library
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
 
-              
+            // Upload file to server
+            if($this->upload->do_upload('file')){
+                // Uploaded file data
+                $imageData = $this->upload->data();
+                 $uploadImgData[$i]= $imageData['file_name'];
+                 $image=implode(',',$uploadImgData);
+
+            }
+        }
       $string=preg_replace('/[^a-zA-Z0-9 \&%|{.}=,?!*()"-_+$@;<>\']/', '', $this->input->post('title')); //filter karakter unik dan replace dengan kosong ('')
         $trim=trim($string); // hilangkan spasi berlebihan dengan fungsi trim
         $pre_slug=strtolower(str_replace(" ", "-", $trim)); // hilangkan spasi, kemudian ganti spasi dengan tanda strip (-)
@@ -293,7 +276,7 @@ function update_gallery($id_gallery)
             // 'client_name' => $this->input->post('client_name'),
             // 'client_foto' => $client_foto,
             'slug_gallery' => $slug_gallery ,
-            'foto' => $foto 
+            'foto' => $image 
       );
             $this->db->where('id_gallery', $id_gallery);
             $update = $this->db->update('gallery',$data);

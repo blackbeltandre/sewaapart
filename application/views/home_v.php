@@ -12,7 +12,14 @@
     <div id="owl-example" class="owl-carousel">
       <?php foreach($show_room_by_cat as $show_room_by_cat){ ?>
       <div class="properties">
-        <div class="image-holder"><img src="<?php echo base_url(); ?>/assets/foto/<?php echo $show_room_by_cat["foto"];?>" class="img-responsive" alt="properties"/>
+        <div class="image-holder">
+          <?php  
+         $foto_arritem = explode(",",$show_room_by_cat["foto"]); 
+         $count_arritem = count($foto_arritem)-1;
+         for ($fotositem = 0; $fotositem <= 0; $fotositem ++) {
+        $final_foto_item = $foto_arritem[$fotositem]; ?>
+        <img src="<?php echo base_url(); ?>assets/foto/<?php echo $final_foto_item;?>" class="img-responsive" />
+        <?php } ?>
           <div class="status sold"><?php echo $show_room_by_cat["author"];?></div>
         </div>
         <h4><a href="<?php echo base_url(); ?>unit/detail/<?php echo $show_room_by_cat["id_gallery"];?>/<?php echo $show_room_by_cat["id_category"];?>"><?php 

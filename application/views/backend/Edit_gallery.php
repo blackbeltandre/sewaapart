@@ -121,12 +121,42 @@
                                          <div class="col-sm-6">
                                        <div class="form-group">
                                       <label>Foto</label>
-                                          <input type="file" class="form-control" data-required="true" name="foto" value="<?php echo set_value('foto'); ?>">                        
-                            
-                           
-                            <img src="<?php echo base_url();?>assets/foto/<?php echo $gallery["foto"];?>" width="60" height="60" onError="this.onerror=null;this.src='<?php echo base_url();?>assets/foto/foto.jpg';" width="60" height="60" />
-                            
-                        </div></div> <div class="col-sm-12">
+                                          <input type="file" class="form-control" data-required="true" name="foto[]" value="<?php echo $gallery["foto"]; ?>" multiple="multiple">
+ <style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>                     
+                        </div></div> 
+                        <?php  
+         $foto_arritem = explode(",",$gallery["foto"]); 
+         $count_arritem = count($foto_arritem)-1;
+         for ($fotositem = 0; $fotositem <= $count_arritem; $fotositem ++) {
+        $final_foto_item = $foto_arritem[$fotositem]; ?>
+     <center>   <div class="gallery"> 
+  <a target="_blank" href="<?php echo base_url(); ?>assets/foto/<?php echo $final_foto_item;?>">
+    <img src="<?php echo base_url(); ?>assets/foto/<?php echo $final_foto_item;?>" width="600" height="400" alt="properties"/>
+  </a>
+  <div class="desc"><?php echo $final_foto_item;?></div>
+</div></center><?php } ?>
+      <div class="col-sm-12">
                                        <div class="form-group">
                                      <label>Description</label>
                                    <textarea id="editor" rows="10" cols="30"  name="description" value="<?php echo set_value('description'); ?>"><?php echo $gallery["description"]; ?></textarea>
