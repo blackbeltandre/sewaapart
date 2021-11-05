@@ -4,9 +4,9 @@
   <div class="properties-listing spacer"><!--  <a href="buysalerent.php" class="pull-right viewall">View All Listing</a> -->
     <h2>
     <?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Semua Unit
+                    All Unit
                     <?php }else{ ?>
-                      All Unit
+                     Semua  Unit
                   <?php } ?>
                </h2>
     <div id="owl-example" class="owl-carousel">
@@ -29,9 +29,9 @@
         <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="x dilihat"><?php echo $show_room_by_cat["counter"];?></span> </div>
         <a class="btn btn-primary" href="<?php echo base_url(); ?>unit/detail/<?php echo $show_room_by_cat["id_gallery"];?>/<?php echo $show_room_by_cat["id_category"];?>">
         <?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Lihat Detail
+                    View Detail
                     <?php }else{ ?>
-                      View Detail
+                      Lihat Detail
                   <?php } ?>
                 </a></div>
      <?php } ?>

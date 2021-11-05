@@ -60,8 +60,12 @@ class Home extends CI_Controller {
         
         $query= $this->db->query("select sum(coalesce(counter, 0))jumlah,title from master_article group by title");
         $data['master_article'] = $query->result();
-        $query= $this->db->query("select sum(coalesce(counter, 0))jumlah,title from gallery where lang='ID' group by title");
-        $data['master_gallery'] = $query->result();
+        $query= $this->db->query("select sum(coalesce(a.counter, 0))jumlah,a.title,b.id_category,b.category from gallery a 
+            left join category_gallery b on a.id_category=b.id_category where a.lang='ID' and b.category='Sewa' group by a.title,b.id_category,b.category");
+        $data['master_gallery_sewa'] = $query->result();
+        $query= $this->db->query("select sum(coalesce(a.counter, 0))jumlah,a.title,b.id_category,b.category from gallery a 
+            left join category_gallery b on a.id_category=b.id_category where a.lang='ID' and b.category='Jual' group by a.title,b.id_category,b.category");
+        $data['master_gallery_jual'] = $query->result();
 
     $data['title'] = "DASHBOARD";
     $data['main']= "backend/Home_v";

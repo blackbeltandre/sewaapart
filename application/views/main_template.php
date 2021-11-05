@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>Jual Beli dan Sewa Apartemen Harian ,Mingguan & Bulanan Di Apartemen Kalibata City Jakarta ,Indonesia </title>
- <meta name="description" content="Jual Beli dan Sewa Apartemen Harian ,Mingguan & Bulanan Di Apartemen Kalibata City Jakarta ,Indonesia.">
-  <meta name="author" content="Jual ,Beli ,Sewa Apartemen Kalibata City">
-<meta name="description" content="Jual Beli dan Sewa Apartemen Harian ,Mingguan & Bulanan Di Apartemen Kalibata City Jakarta ,Indonesia">
-<!-- Google / Search Engine Tags -->
-<meta itemprop="name" content="Jual Beli dan Sewa Apartemen Harian ,Mingguan & Bulanan Di Apartemen Kalibata City Jakarta ,Indonesia.">
-<meta itemprop="description" content="Dapatkan Hunian Apartemen Terbaik Di Jakarta Selatan ,Dengan Akses Terbaik Ke Semua Wilayah Jakarta">
-<meta itemprop="image" content="<?php echo base_url(); ?>assets/foto/icon.png">
-<!-- Facebook Meta Tags -->
-<meta property="og:url" content="https://sewajualapart.com">
-<meta property="og:type" content="Jual Beli dan Sewa Apartemen Harian ,Mingguan & Bulanan Di Apartemen Kalibata City Jakarta ,Indonesia.">
-<meta property="og:title" content="Dapatkan Hunian Apartemen Terbaik Di Jakarta Selatan ,Dengan Akses Terbaik Ke Semua Wilayah Jakarta">
-<meta property="og:description" content="Dapatkan Hunian Apartemen Terbaik Di Jakarta Selatan ,Dengan Akses Terbaik Ke Semua Wilayah Jakarta">
-<meta property="og:image" content="<?php echo base_url(); ?>assets/foto/icon.png">
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="Jual Beli dan Sewa Apartemen Harian ,Mingguan & Bulanan Di Apartemen Kalibata City Jakarta ,Indonesia.">
-<meta name="twitter:title" content="Jual Beli dan Sewa Apartemen Harian ,Mingguan & Bulanan Di Apartemen Kalibata City Jakarta ,Indonesia.">
-<meta name="twitter:description" content="Jual Beli dan Sewa Apartemen Harian ,Mingguan & Bulanan Di Apartemen Kalibata City Jakarta ,Indonesia.">
-<meta name="twitter:image" content="<?php echo base_url(); ?>assets/foto/icon.png">
-<meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+<head>
+  <!-- basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- mobile metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <!-- site metas -->
+  <title>Jual Beli dan Sewa Apartemen Harian ,Mingguan & Bulanan Di Apartemen Kalibata City Jakarta ,Jakarta Selatan ,Indonesia</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- fevicon -->
+  <link rel="icon" href="<?php echo base_url(); ?>/assets/foto/icon.png" sizes="16x16">
+    <meta name="description" content="Jual Beli dan Sewa Apartemen Harian ,Mingguan & Bulanan Di Apartemen Kalibata City Jakarta ,Jakarta Selatan ,Indonesia.">
+    <meta name="author" content="https://www.sewajualapart.com">
+    <meta name="description" content="Jual Beli dan Sewa Apartemen Harian ,Mingguan & Bulanan Di Apartemen Kalibata City Jakarta ,Jakarta Selatan ,Indonesia.">
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Sewa Apartemen Kalibata City ,Harian, Mingguan ,Bulanan ,Tahunan">
+    <meta itemprop="description" content="Jual Beli dan Sewa Apartemen Harian ,Mingguan & Bulanan Di Apartemen Kalibata City Jakarta ,Jakarta Selatan ,Indonesia.">
+    <meta itemprop="image" content="<?php echo base_url(); ?>/assets/foto/icon.png" >
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://www.sewajualapart.com">
+    <meta property="og:type" content="https://www.sewajualapart.com">
+    <meta property="og:title" content="Sewa Apartemen Kalibata City ,Harian, Mingguan ,Bulanan ,Tahunan">
+    <meta property="og:description" content="Jual Beli dan Sewa Apartemen Harian ,Mingguan & Bulanan Di Apartemen Kalibata City Jakarta ,Jakarta Selatan ,Indonesia.">
+    <meta property="og:image" content="<?php echo base_url(); ?>/assets/foto/icon.png">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="Sewa Apartemen Kalibata City ,Harian, Mingguan ,Bulanan ,Tahunan">
+    <meta name="twitter:title" content="Sewa Apartemen Kalibata City ,Harian, Mingguan ,Bulanan ,Tahunan">
+    <meta name="twitter:description" content="Jual Beli dan Sewa Apartemen Harian ,Mingguan & Bulanan Di Apartemen Kalibata City Jakarta ,Jakarta Selatan ,Indonesia.">
+    <meta name="twitter:image" content="<?php echo base_url(); ?>/assets/foto/icon.png">
+    <link rel="apple-touch-icon" href="<?php echo base_url(); ?>/assets/foto/icon.png">
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/foto/icon.png">
     <link rel="stylesheet" href="<?php echo base_url(); ?>/desain/assets/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="<?php echo base_url(); ?>/desain/assets/style.css"/>
-  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="<?php echo base_url(); ?>/desain/assets/bootstrap/js/bootstrap.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    <script src="<?php echo base_url(); ?>/desain/assets/bootstrap/js/bootstrap.js"></script>
   <script src="<?php echo base_url(); ?>/desain/assets/script.js"></script>
 
 
@@ -127,9 +138,9 @@ function topFunction() {
             <div class="navbar-collapse  collapse">
               <ul class="nav navbar-nav navbar-right">
                <li class="active"><a href="<?php echo base_url(); ?>"><?php if(get_cookie('lang_is') === 'in'){ ?>
-  Beranda
+  Home
   <?php }else{ ?>
-    Home
+    Beranda
 <?php } ?></a></li>
                <?php foreach($menu as $menu){ 
                           $menu_page = strtolower($menu["page"]);?> 
@@ -146,9 +157,9 @@ function topFunction() {
                        
                         <?php } ?>
             <li><a href="<?php echo base_url(); ?>contact"><?php if(get_cookie('lang_is') === 'in'){ ?>
-  Bukutamu
+  Contact
   <?php }else{ ?>
-    Contact
+    Bukutamu
 <?php } ?></a></li>
               </ul>
             </div>
@@ -175,15 +186,17 @@ function topFunction() {
                 <li>
                                   <form action="<?php echo base_url('lang_setter/set_to/english');?>" method="post">
                                   <select name='dropdown' onchange='this.form.submit()' class="btn-default">
-                                  <option value="ID">Indonesia</option>
                                   <option value="EN">English</option>
+                                  <option value="ID">Indonesia</option>
+                                  
                                   </select>
                                       <noscript><input type="submit" value="Submit"/></noscript></li>
                                       <?php }else{ ?>
                                          <li><form action="<?php echo base_url('lang_setter/set_to/indonesia');?>" method="post">
                                   <select name='dropdown' onchange='this.form.submit()' class="btn-default">
-                                  <option value="EN">English</option>
+                                  
                                   <option value="ID">Indonesia</option>
+                                  <option value="EN">English</option>
                                   </select>
                                   </form>
                                   </li>
@@ -240,7 +253,7 @@ function topFunction() {
       </div><!-- /slider-wrapper -->
 </div>
 
-<a class="wabutton" target="_blank" href="https://api.whatsapp.com/send?phone=081263922606&text=Hi,saya ingin memesan room ? https://sewajualapart.com"><img title="custom-chat-whatsaap-button" src="<?php echo base_url(); ?>assets/wa_chat.png" alt="Whatsapp Chat" width="40" height="40" /></a>
+<a class="wabutton" target="_blank" href="https://api.whatsapp.com/send?phone=6281263922606&text=Hi,saya ingin memesan room ? https://sewajualapart.com"><img title="custom-chat-whatsaap-button" src="<?php echo base_url(); ?>assets/wa_chat.png" alt="Whatsapp Chat" width="40" height="40" /></a>
 <style>
 .wabutton{
 width:110px;
@@ -256,9 +269,10 @@ z-index:100;
   <div class="container"> 
     <!-- banner -->
     <h3><?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Jual ,Beli & Sewa Apartemen
+                     Sell ,Buy and Rent Apartment
+
                     <?php }else{ ?>
-                      Sell ,Buy and Rent Apartment
+                     Jual ,Beli & Sewa Apartemen
                   <?php } ?>
                 </h3>
     <div class="searchbar">
@@ -269,9 +283,10 @@ z-index:100;
            
               <div class="col-lg-6 col-sm-6">
               <a href="<?php echo base_url(); ?>contact" target="_blank" class="btn btn-success"><?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Hubungi kami
-                    <?php }else{ ?>
                       Contact Us
+                    <?php }else{ ?>
+                    
+                      Hubungi kami
                   <?php } ?>
                </a>
               </div>
@@ -281,11 +296,11 @@ z-index:100;
         </div>
         <div class="col-lg-5 col-lg-offset-1 col-sm-6 ">
           <p>Dapatkan Penawaran Terbaik Melalui Agent Kami</p>
-          <a class="btn btn-info" target="_blank" href="https://api.whatsapp.com/send?phone=081263922606&text=Hi,saya ingin memesan room ? https://sewajualapart.com">
+          <a class="btn btn-info" target="_blank" href="https://api.whatsapp.com/send?phone=6281263922606&text=Hi,saya ingin memesan room ? https://sewajualapart.com">
           <?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Hubungi Agen
+                    Call Agent
                     <?php }else{ ?>
-                      Call Agent
+                      Hubungi Agen
                   <?php } ?></a></div>
       </div>
     </div>
@@ -298,9 +313,10 @@ z-index:100;
             <div class="col-lg-3 col-sm-3">
                    <h4>
                    <?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Navigasi
+                    Resources
                     <?php }else{ ?>
-                      Resources
+                      
+                      Navigasi
                   <?php } ?>
                   </h4>
                    <ul class="row">
@@ -319,9 +335,9 @@ z-index:100;
                         <?php } ?>
                 <li class="col-lg-12 col-sm-12 col-xs-3"><a href="<?php echo base_url(); ?>contact"><a href="<?php echo base_url(); ?>contact"><font color="gray">
               <?php if(get_cookie('lang_is') === 'in'){ ?>
-  Bukutamu
+ Contact
   <?php }else{ ?>
-    Contact
+    Bukutamu
 <?php } ?></font></a></li>
               </ul>
             </div>
@@ -329,9 +345,9 @@ z-index:100;
             <div class="col-lg-3 col-sm-3">
                     <h4>
                      <?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Lokasi Kami
+                    Our Location 
                     <?php }else{ ?>
-                      Our Location 
+                      Lokasi Kami
                   <?php } ?>
                 </h4>
                     <p><b>Apartemen Kalibata City, Tower Jasmine, Rawajati,</b><br>
@@ -340,9 +356,10 @@ z-index:100;
             
           <div class="col-lg-3 col-sm-3">
                     <h4><?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Bagikan
+                   Share
+
                     <?php }else{ ?>
-                      Share 
+                       Bagikan
                   <?php } ?>
                  </h4>
                     <?php 
@@ -352,20 +369,21 @@ z-index:100;
                     //echo $link;
                   ?> 
                  
-                 <a href="http://www.facebook.com/share.php?u=<?php echo $link; ?>" target="_blank">
-                <img title="custom-fb-share" src="<?php echo base_url(); ?>assets/facebook.png" alt="" width="40" height="40" /></a>
+                 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="dilSYGI6"></script>
+                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $link; ?>&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><img title="custom-fb-share" src="<?php echo base_url(); ?>assets/facebook.png" alt="" width="40" height="40" /></a>
                 &nbsp;&nbsp;
-                <a href="http://twitter.com/intent/tweet?url=<?php echo $link; ?>&amp;text=Jual ,Beli ,Sewa Apartemen Kalibata City&amp;hashtags=Jual ,Beli ,Sewa Apartemen Kalibata City" target="_blank">
+                <a href="http://twitter.com/intent/tweet?url=<?php echo $link; ?>&amp;text=Jual ,Beli ,Sewa Apartemen Kalibata City ,Harian, Mingguan ,Bulanan ,Tahunan&amp;hashtags=Jual ,Beli ,Sewa Apartemen Kalibata City ,Harian, Mingguan ,Bulanan ,Tahunan" target="_blank">
                 <img title="custom-twitter-button" src="<?php echo base_url(); ?>assets/twitter.png" alt="" width="40" height="40" />
                 &nbsp;&nbsp;
-                <a target="_blank" href="mailto:info@sewajualapart.com?subject=Jual ,Beli ,Sewa Apartemen Kalibata City&body=<?php echo $link; ?>"><img title="custom-email-button" src="<?php echo base_url(); ?>assets/email.png" alt="" width="50" height="45" /></a>
+                <a target="_blank" href="mailto:info@sewajualapart.com?subject=Jual ,Beli ,Sewa Apartemen Kalibata City ,Harian, Mingguan ,Bulanan ,Tahunan&body=<?php echo $link; ?>"><img title="custom-email-button" src="<?php echo base_url(); ?>assets/email.png" alt="" width="50" height="45" /></a>
                 &nbsp;&nbsp;<a target="_blank" href="whatsapp://send?text=<?php echo $link; ?>"><img title="custom-share-whatsaap-button" src="<?php echo base_url(); ?>assets/whatsapp.png" alt="" width="40" height="40" /></a>
             </div>
              <div class="col-lg-3 col-sm-3">
                     <h4><?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Kontak Kami
+                     Contact Us 
+
                     <?php }else{ ?>
-                      Contact Us 
+                      Kontak Kami
                   <?php } ?>
                </h4>
 <span class="glyphicon glyphicon-envelope"></span> info@sewajualapart.com<br>

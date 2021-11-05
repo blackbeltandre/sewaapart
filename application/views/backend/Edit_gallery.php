@@ -121,7 +121,7 @@
                                          <div class="col-sm-6">
                                        <div class="form-group">
                                       <label>Foto</label>
-                                          <input type="file" class="form-control" data-required="true" name="foto[]" value="<?php echo $gallery["foto"]; ?>" multiple="multiple">
+                                          <input type="file" class="form-control" name="foto[]" value="<?php echo $gallery["foto"]; ?>" multiple="multiple" required>
  <style>
 div.gallery {
   margin: 5px;

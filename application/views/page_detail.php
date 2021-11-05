@@ -6,23 +6,26 @@
       <?php
       foreach($page_detail as $detail) ?>
     <span class="pull-right"><a href="<?php echo base_url(); ?>"><?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Beranda
+                    Home
                     <?php }else{ ?>
-                     Home
+                     
+                     Beranda
                   <?php } ?></a> / <?php echo $detail["title"];?></span>
     <h2><?php echo $detail["title"];?> </h2>
 </div>
 <?php }else{ ?>
  <div class="container"> 
     <span class="pull-right"><a href="<?php echo base_url(); ?>"><?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Beranda
+                    Home
+
                     <?php }else{ ?>
-                     Home
+                     Beranda
                   <?php } ?></a></span>
     <h2><?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Content Tidak Ditemukan
+                    Content Not Found
                     <?php }else{ ?>
-                     Content Not Found
+                     
+                     Content Tidak Ditemukan
                   <?php } ?></h2>
 </div>
   <?php } ?>

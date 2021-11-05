@@ -22,14 +22,14 @@
 <?php }else{ ?>
  <div class="container"> 
     <span class="pull-right"><a href="<?php echo base_url(); ?>"><?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Beranda
+                   Home
                     <?php }else{ ?>
-                     Home
+                      Beranda
                   <?php } ?></a> / Unit</span>
     <h2> <?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Unit Tidak Ditemukan
+                    Unit Not Found
                     <?php }else{ ?>
-                      Unit Not Found
+                      Unit Tidak Ditemukan
                   <?php } ?></h2>
 </div>
   <?php } ?>
@@ -41,16 +41,16 @@
 <div class="properties-listing spacer">
 
 <div class="row">
-<div class="col-lg-3 col-sm-4 hidden-xs">
+<div class="col-lg-3 col-sm-4 ">
 
-<div class="hot-properties hidden-xs">
+<div class="hot-properties ">
 <?php if(!empty($related_unit)){ ?>
 <?php
       foreach($related_unit as $related_units) ?>
         <h4><?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Unit Lainnya Untuk Di <u><strong><?php echo $related_units["category"];?></strong></u>
+                     Related Unit For <u><strong><?php echo $related_units["category"];?></strong></u>
                     <?php }else{ ?>
-                       Related Unit For <u><strong><?php echo $related_units["category"];?></strong> </u>
+                      Unit Lainnya Untuk Di <u><strong><?php echo $related_units["category"];?></strong> </u>
                   <?php } ?></h4>
                   <hr>
         <?php
@@ -73,9 +73,9 @@
 <?php }}else{ ?>
    <h4>
    <?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Belum Ada Unit Serupa
+                    No Related Unit To Display
                     <?php }else{ ?>
-                      No Related Unit To Display
+                     Belum Ada Unit Serupa 
                   <?php } ?>
                  </h4>
   <?php } ?>
@@ -89,9 +89,9 @@
       foreach($not_related_unit as $not_related_units) ?>
         <h4>
           <?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Unit Lainnya Untuk Di <strong><u><?php echo $not_related_units["category"];?></u></strong>
+                   Related Unit For <strong><u><?php echo $not_related_units["category"];?></u></strong>
                     <?php }else{ ?>
-                       Related Unit For <strong><u><?php echo $not_related_units["category"];?></u></strong> 
+                        Unit Lainnya Untuk Di <strong><u><?php echo $not_related_units["category"];?></u></strong> 
                   <?php } ?>
 
                   </h4>
@@ -244,26 +244,26 @@ div.desc {
 <!-- <p class="price">$ 200,000,000</p> -->
   <p class="area"><span class="glyphicon glyphicon-map-marker"></span>
   <?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Lokasi
+                    Location
                     <?php }else{ ?>
-                      Location
+                      Lokasi
                   <?php } ?>
                   <br> <strong>DKI Jakarta </strong>,Jakarta Selatan ,<font color="black"><u>Indonesia</u></font></p>
   <div class="profile">
    <hr><span class="glyphicon glyphicon-user"></span>  <?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Detail Agen
+                    Agent Detail
                     <?php }else{ ?>
-                      Agent Detail
+                      Detail Agen
                   <?php } ?>
 
-  <p><font color="black"><strong>Jasen Sihite <br><u>081263922606</u></font></strong></p>
+  <p><font color="black"><strong>Jasen Sihite <br>jasen@sewajualapart.com<br><u>6287748350894</u></font></strong></p>
   </div>
 </div>
  <hr>
     <h6><span class="glyphicon glyphicon-home"></span> <?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Bagikan
+                   Share
                     <?php }else{ ?>
-                      Share 
+                        Bagikan
                   <?php } ?></h6>
     <div class="listing-detail">
   
@@ -273,10 +273,9 @@ div.desc {
                                   $_SERVER['REQUEST_URI']; 
                     //echo $link;
                   ?> 
-                 
-                 <a href="http://www.facebook.com/share.php?u=<?php echo $link; ?>" target="_blank">
-                <img title="custom-fb-share" src="<?php echo base_url(); ?>assets/facebook.png" alt="" width="40" height="40" /></a>
-                &nbsp;&nbsp;
+                  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="dilSYGI6"></script>
+                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $link; ?>&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><img title="custom-fb-share" src="<?php echo base_url(); ?>assets/facebook.png" alt="" width="40" height="40" /></a>
+                 &nbsp;&nbsp;
                 <a href="http://twitter.com/intent/tweet?url=<?php echo $link; ?>&amp;text=Jual ,Beli ,Sewa Apartemen Kalibata City&amp;hashtags=Jual ,Beli ,Sewa Apartemen Kalibata City" target="_blank">
                 <img title="custom-twitter-button" src="<?php echo base_url(); ?>assets/twitter.png" alt="" width="40" height="40" />
                 &nbsp;&nbsp;
@@ -287,15 +286,15 @@ div.desc {
 <div class="col-lg-12 col-sm-6 ">
 <div class="enquiry">
   <h6><span class="glyphicon glyphicon-envelope"></span> <?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Dapatkan Penawaran Terbaik
+                Get the Best Deals
                     <?php }else{ ?>
-                      Get the Best Deals
+                     Dapatkan Penawaran Terbaik 
                   <?php } ?>
                 </h6>
-  <a class="btn btn-primary" target="_blank" href="https://api.whatsapp.com/send?phone=081263922606&text=Hi,saya ingin memesan room ? https://sewajualapart.com"><?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Hubungi Agen
+  <a class="btn btn-primary" target="_blank" href="https://api.whatsapp.com/send?phone=6287748350894&text=Hi,saya tertarik dengan unit ini ? <?php echo $link; ?>"><?php if(get_cookie('lang_is') === 'in'){ ?>
+                    Call Agent
                     <?php }else{ ?>
-                      Call Agent
+                       Hubungi Agen
                   <?php } ?>
                 </a>
  </div>         

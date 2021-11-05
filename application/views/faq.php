@@ -6,14 +6,15 @@
                     <?php }else{ ?>
                      Home
                   <?php } ?></a> / <?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Bukutamu
+                     Contact Us
                     <?php }else{ ?>
-                      Contact Us
+          Bukutamu
+                     
                   <?php } ?></span>
     <h2><?php if(get_cookie('lang_is') === 'in'){ ?>
-                    Bukutamu
+                     Contact Us 
                     <?php }else{ ?>
-                      Contact Us
+                     Bukutamu
                   <?php } ?>
               </h2>
 </div>

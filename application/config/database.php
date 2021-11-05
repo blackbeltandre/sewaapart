@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+// S2komputer@2021
+// apart
+// jobrtcco_apart
 /*
 | -------------------------------------------------------------------
 | DATABASE CONNECTIVITY SETTINGS
